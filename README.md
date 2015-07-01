@@ -27,4 +27,4 @@ http://flowrouter-jsx-templating.meteor.com
 
 ## Credits
 
-This is a fork of [@arunoda's ***AWESOME*** hack using React and Meteor to get SSR.](https://github.com/timbrandin/hello-react-meteor/tree/master/packages)
+This is a fork of [@arunoda's ***AWESOME*** hack using React and Meteor to get SSR.](https://github.com/arunoda/hello-react-meteor)
