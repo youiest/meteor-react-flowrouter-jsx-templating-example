@@ -1,8 +1,8 @@
 Meteor.methods({
   'reset': function () {
-    Posts.remove({});
+    Pages.remove({});
   },
-  'post/create': function (post) {
-    Posts.insert(post);
+  'page/create': function (page) {
+    Pages.insert(post);
   }
 });
