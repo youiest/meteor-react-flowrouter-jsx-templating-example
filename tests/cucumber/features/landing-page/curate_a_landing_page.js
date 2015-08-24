@@ -7,9 +7,9 @@ module.exports = function () {
     } );
   } );
 
-  this.When( /^a user navigates to the landing page$/, function () {
-    return this.client.url( process.env.ROOT_URL );
-  } );
+  this.When(/^a user navigates to the landing page$/, function () {
+  return this.client.url(process.env.ROOT_URL);
+});
 
   this.Then( /^they see the heading "([^"]*)"$/, function ( arg1, callback ) {
     // Write code here that turns the phrase above into concrete actions

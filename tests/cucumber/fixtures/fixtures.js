@@ -3,6 +3,6 @@ Meteor.methods({
     Pages.remove({});
   },
   'page/create': function (page) {
-    Pages.insert(post);
+    Pages.insert(page);
   }
 });
