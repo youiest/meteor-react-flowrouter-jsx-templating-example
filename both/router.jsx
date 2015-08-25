@@ -1,3 +1,4 @@
+// here let's route / to the lastest landingPost natural/sort
 FlowRouter.route("/", {
   subscriptions: function() {
     var selector = {category: {$ne: "private"}};
