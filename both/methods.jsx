@@ -3,7 +3,7 @@ Meteor.methods({
     Posts.remove({});
   },
   'posts/create': function (page) {
-    // tests call them pages... landing post?!
+// tests call them pages... landing post?!
     Posts.insert(page);
   }
 });
