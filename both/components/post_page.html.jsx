@@ -1,6 +1,6 @@
 <template name="PostPage">
   <div>
-    <a href="/">Back</a>
+    <a href="/PostList">Back</a>
     <h3>{this.data.post.title}</h3>
     <p>{this.data.post.content}</p>
   </div>
