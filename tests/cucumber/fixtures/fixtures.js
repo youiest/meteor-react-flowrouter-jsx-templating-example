@@ -8,7 +8,7 @@ Meteor.methods({
 });
 
 
-call = function call(name, payload) {
+caller = function call(name, payload) {
   Meteor.call(name, name, payload, function (error, result) {
     if (error) {
       log.error("error", error);
