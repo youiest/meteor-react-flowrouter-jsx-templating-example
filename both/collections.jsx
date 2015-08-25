@@ -1,10 +1,12 @@
 Posts = new Mongo.Collection('posts');
 Pages = new Mongo.Collection('pages');
+log = loglevel.createLogger('ssr.collections', 'trace');
 if(Meteor.isServer) {
   Posts.remove({});
-  Posts.insert({
+  i = Posts.insert({
     _id: 'one', title: 'New Meteor Rocks', content: 'Yeah! Check our Meteor Blog for more!'
   });
-  Posts.insert({_id: 'two', title: 'MeteorHacks + Kadira => Kadira++', content: 'Something new soon.'});
-  Posts.insert({_id: 'three', title: 'My Secret Post', category: 'private'});
+  ii = Posts.insert({_id: 'two', title: 'MeteorHacks + Kadira => Kadira++', content: 'Something new soon.'});
+  iii = Posts.insert({_id: 'three', title: 'My Secret Post', category: 'private'});
+  log.info(i,ii,iii)
 }
