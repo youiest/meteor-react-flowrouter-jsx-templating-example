@@ -1,8 +1,8 @@
 Meteor.methods({
-  'reset': function () {
+  'resetPosts': function () {
     Posts.remove({});
   },
-  'page/create': function (page) {
+  'posts/create': function (page) {
     // tests call them pages... landing post?!
     Posts.insert(page);
   }
