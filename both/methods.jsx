@@ -1,12 +1,4 @@
-Meteor.methods({
-  'reset': function () {
-    Pages.remove({});
-  },
-  'page/create': function (page) {
-    Pages.insert(page);
-  }
-});
-
+log = loglevel.createLogger('ssr.optimists', 'trace');
 
 call = function call(name, payload) {
   Meteor.call(name, name, payload, function (error, result) {
@@ -19,7 +11,7 @@ call = function call(name, payload) {
   });
 }
 Meteor.methods({
-  'post/create': function (name, page) {
+  addPost: function (name, page) {
     name = name || 'addPost'
     log = loglevel.createLogger(name);
     Posts.insert({
