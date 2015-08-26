@@ -7,7 +7,7 @@ Meteor.methods({
     Posts.insert(post);
   },
   'posts/createDefault': function () {
-// tests call them pages... landing post?!
+// tests call them Posts... landing post?!
     a = {
       _id: 'one',
       title: 'New Meteor Rocks',

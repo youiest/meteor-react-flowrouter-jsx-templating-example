@@ -12,7 +12,7 @@ http://flowrouter-jsx-templating.meteor.com
 * It works without any JavaScript!
 * Google and Search engines loves it, easy to index!
 * Facebook and Social media can grab it's tags easily!
-* Easily cachable, just setup Varnish or whatever in front of it and serve pages even faster.
+* Easily cachable, just setup Varnish or whatever in front of it and serve Posts even faster.
 
 ## Features
 
