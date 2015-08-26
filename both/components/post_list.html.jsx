@@ -1,7 +1,7 @@
 <template name="PostList">
   <div>
     <h1>
-      {this.data.posts[0].title}
+      {this.data.landingPost.title}
     </h1>
     <ul>
       {this.data.posts.map(function(task) {
@@ -21,16 +21,14 @@ Template.PostList.helpers({
   },
   landingPost: function () {
     log = loglevel.createLogger( 'post_list.landingPost', 'trace' );
-    landingPost = Posts.find({
+    landingPost = Posts.findOne({
       category: 'landingPost'
     }, {
       sort: {
         _id: -1
       }
-    }, {
-      limit: 1
-    }).fetch();
-    log.trace(landingPost)
+    })
+    //log.info(landingPost)
     return landingPost
   }
 });
