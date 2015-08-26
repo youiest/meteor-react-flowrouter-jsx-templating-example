@@ -10,7 +10,8 @@ if ( Meteor.isServer ) {
   } );
   ii = Posts.insert( {
     _id: 'two',
-    title: 'MeteorHacks + Kadira => Kadira++',
+    title: 'My Book',
+    category: 'landingPost',
     content: 'Something new soon.'
   } );
   iii = Posts.insert( {
