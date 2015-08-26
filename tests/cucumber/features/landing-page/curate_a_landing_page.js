@@ -1,6 +1,7 @@
 module.exports = function () {
 
   this.Given( /^I have created a landing page with the heading "([^"]*)"$/, function ( heading ) {
+
     return this.server.call( 'page/create', {
       // this should be to a particular post
       path: '/',
