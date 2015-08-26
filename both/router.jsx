@@ -1,17 +1,32 @@
 // here let's route / to the lastest landingPost natural/sort
 
 FlowRouter.route("/", {
+  name: 'landingPost',
   subscriptions: function () {
+    var latestGetId = 'one'
+    var nope = function () {
+      return Posts.findOne({
+        category: {
+          $ne: "private"
+        }
+      })._id
+    }
+    this.register('singlePost', Meteor.subscribe('singlePost', latestGetId));
+  },
+  action: function () {
     var selector = {
       category: {
         $ne: "private"
       }
     };
-    this.register('posts', Meteor.subscribe('posts', selector));
-  },
-  action: function () {
+    var latestId = Posts.findOne({
+        category: {
+          $ne: "private"
+        }
+      })._id
+//expensive?
     ReactLayout.render(BlogLayout, {
-      content: <PostList/>
+      content: <PostPage _id={latestId}/>
     });
   }
 });
