@@ -16,8 +16,8 @@ module.exports = function () {
 
   this.Then( /^they see the heading "([^"]*)"$/, function ( heading ) {
     return this.client.
-    waitForExist( 'h1' ).
-    getText( 'h1' ).should.become( heading );
+    waitForExist( 'h3' ).
+    getText( 'h3' ).should.become( heading );
   } );
 
 };

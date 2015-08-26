@@ -3,30 +3,12 @@
 FlowRouter.route("/", {
   name: 'landingPost',
   subscriptions: function () {
-    var latestGetId = 'one'
-    var nope = function () {
-      return Posts.findOne({
-        category: {
-          $ne: "private"
-        }
-      })._id
-    }
-    this.register('singlePost', Meteor.subscribe('singlePost', latestGetId));
+    this.register('singlePost', Meteor.subscribe('singlePost', 'one'));
   },
   action: function () {
-    var selector = {
-      category: {
-        $ne: "private"
-      }
-    };
-    var latestId = Posts.findOne({
-        category: {
-          $ne: "private"
-        }
-      })._id
-//expensive?
+
     ReactLayout.render(BlogLayout, {
-      content: <PostPage _id={latestId}/>
+      content: <PostPage _id={'one'}/>
     });
   }
 });
