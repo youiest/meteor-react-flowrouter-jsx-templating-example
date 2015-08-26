@@ -7,19 +7,21 @@ Meteor.methods({
     Posts.insert(post);
   },
   'posts/createDefault': function () {
-// tests call them pages... landing post?!
+// tests call them Posts... landing post?!
     a = {
       _id: 'one',
-      title: 'New Meteor Rocks',
+      title: 'My Book',
       content: 'Yeah! Check our Meteor Blog for more!',
-      category: 'landingPost'
+      category: 'landingPost',
+      landingPost: new Date().getTime()
     }
     Posts.insert(a);
     b = {
       _id: 'two',
       title: 'MeteorHacks + Kadira => Kadira++',
       content: 'Something new soon.',
-      category: 'landingPost'
+      category: 'landingPost',
+      landingPost: new Date().getTime()
     }
     Posts.insert(b);
     c = {
@@ -28,5 +30,6 @@ Meteor.methods({
       category: 'private'
     };
     Posts.insert(c);
+    return true
   }
 });

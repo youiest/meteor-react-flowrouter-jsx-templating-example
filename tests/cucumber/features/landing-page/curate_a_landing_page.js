@@ -4,6 +4,10 @@ module.exports = function () {
 
     return this.server.call( 'page/create', {
       // this should be to a particular post
+      _id: 'six',
+      title: heading,
+      content: 'Yeah! Check our Meteor Blog for more!',
+      category: 'landingPost',
       path: '/',
       // heading should derived from path or viceversa
       heading: heading
