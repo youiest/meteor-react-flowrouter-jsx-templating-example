@@ -1,23 +1,28 @@
 FlowRouter.route("/", {
-  subscriptions: function() {
-    var selector = {category: {$ne: "private"}};
+  subscriptions: function () {
+    var selector = {
+      category: {
+        $ne: "private"
+      }
+    };
     this.register('posts', Meteor.subscribe('posts', selector));
   },
-  action: function() {
+  action: function () {
     ReactLayout.render(BlogLayout, {
-      content: <PostList />
+      content: <PostList/>,
+      landingPost: <landingPost/>
     });
   }
 });
 
 FlowRouter.route('/post/:_id', {
   name: 'post',
-  subscriptions: function(params) {
+  subscriptions: function (params) {
     this.register('singlePost', Meteor.subscribe('singlePost', params._id));
   },
-  action: function(params) {
+  action: function (params) {
     ReactLayout.render(BlogLayout, {
-      content: <PostPage _id={params._id} />
+      content: <PostPage _id={params._id}/>
     });
   }
 });
