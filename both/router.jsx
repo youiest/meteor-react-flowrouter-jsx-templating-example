@@ -6,12 +6,24 @@ FlowRouter.route("/", {
       }
     };
     this.register('posts', Meteor.subscribe('posts', selector));
+    var selector = ({
+      category: landingPost
+    },
+    {
+      limit: 1
+    });
+    this.register('landingPost', Meteor.subscribe('posts', selector));
   },
   action: function () {
     ReactLayout.render(BlogLayout, {
-      content: <PostList/>,
-      landingPost: <landingPost/>
+      content: <PostList/>
+
     });
+    ReactLayout.render(BlogLayout, {
+      landingPost: <landingPost/>
+
+    });
+
   }
 });
 
