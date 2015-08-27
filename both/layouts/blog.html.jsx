@@ -20,6 +20,6 @@ Template.BlogLayout.helpers({
         _id: -1,
         limit: 1
       }
-    }).fetch()[0]
+    }).fetch()
   }
 });
