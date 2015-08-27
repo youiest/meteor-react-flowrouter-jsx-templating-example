@@ -1,6 +1,5 @@
 <template name="PostList">
   <div>
-    
     <ul>
       {this.data.posts.map(function(task) {
         var path = FlowRouter.path('post', {_id: task._id})

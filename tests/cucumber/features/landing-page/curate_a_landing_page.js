@@ -5,8 +5,10 @@ module.exports = function () {
     return this.server.call( 'page/create', {
       // this should be to a particular post
       path: '/',
+      category: 'landingPost',
       // heading should derived from path or viceversa
-      heading: heading
+      heading: heading,
+      title: heading
     } );
   } );
 
