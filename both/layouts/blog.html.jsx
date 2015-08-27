@@ -13,11 +13,12 @@ Template.BlogLayout.helpers({
   landingPost: function () {
     //log = loglevel.createLogger( 'post_list.landingPost', 'trace' );
     //log.info(landingPost)
-    return Posts.findOne({
+    return Posts.find({
       category: 'landingPost'
     }, {
       sort: {
-        _id: -1
+        _id: -1,
+        limit: 1
       }
     })
   }
