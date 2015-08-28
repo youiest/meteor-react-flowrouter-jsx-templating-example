@@ -5,7 +5,7 @@ if ( Meteor.isServer ) {
   Posts.remove( {} );
   i = Posts.insert( {
     _id: 'one',
-    title: 'New Meteor Rocks',
+    title: 'My Book',
     content: 'Yeah! Check our Meteor Blog for more!'
   } );
   ii = Posts.insert( {
