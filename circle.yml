@@ -12,7 +12,8 @@ dependencies:
     # Install  package dependencies for Cucumber support files
     #- npm install --production:
     #pwd: tests/cucumber
-    - npm install --production: pwd: app/tests/cucumber
+    - npm install --production:
+        pwd: tests/cucumber
 
 test:
   override:
