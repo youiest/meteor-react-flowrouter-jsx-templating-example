@@ -1,1 +1,1 @@
-meteor deploy flowrouter-jsx-templating-cucumber
+meteor deploy flowrouter-jsx-templating-cucumber-worksish
