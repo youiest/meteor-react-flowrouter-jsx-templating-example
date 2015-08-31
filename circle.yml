@@ -21,8 +21,3 @@ test:
     - meteor --test:
         environment:
           VELOCITY_CI: true
-deployment:
-  staging:
-    branch: worksish
-    commands:
-      - ./deploy_staging.sh
