@@ -1,5 +1,3 @@
-[![Circle CI](https://circleci.com/gh/youiest/meteor-react-flowrouter-jsx-templating-example/tree/worksish.svg?style=svg)](https://circleci.com/gh/youiest/meteor-react-flowrouter-jsx-templating-example/tree/worksish)
-
 # Example Isomorphic Meteor+React app (with SSR and FlowRouter).
 
 > Try turning off JavaScript, it will still render the intial  state of the app, as expected! [Here's a Chrome plugin to turn JavaScript off.](https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje)
